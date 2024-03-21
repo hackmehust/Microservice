@@ -1,5 +1,0 @@
-Setting up modules/menus for applying function authorization. Configuring departments and assigning permissions from the previous setup. Creating user permissions. Configuring parameters for use in various screens. Store search functionality by region.
-Technology: Spring Boot, MySQL
-
-Dashboard of general customer information. Synthesize chat history information between employees and customers. Customer management module (transactions, feedback, order history complaints)
-Technology: Spring Boot, MongoDB
