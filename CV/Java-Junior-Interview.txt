@@ -1,0 +1,31 @@
+Store Procedure: Ưu nhược điểm so với dùng Java, tối ưu Procedure
+Index: Các loại index
+Multi Thread: Trường hợp dùng thực tế?
+
+
+
+@lazy loading @eager loading là gì ? 
+ORM framework? cấu trúc của OAuth2 ? 
+cấu trúc của JWT ? 
+cấu trúc 1 project springboot ? 
+spring MVC ? khác nhau ntn ? 
+turning sql, có những cách nào ? 
+đã làm việc với số lượng bản ghi lớn chưa ? xử lý ntn ? 
+phân trang sql ntn ? bean ? ioc ? DI ? sql pool ? jdbc ? nativeSQL vs hql ? 
+entity tương tác vs db ntn ? 
+crsf ? cors ? cách fix ? 
+Vị trí của transactional ảnh hưởng ntn với kết quả chạy ?
+
+
+- FetchType.LAZY và FetchType.Eager có cơ chế hoạt động như thế nào? Khi nào thì nên sử dụng.
+- GET có ưu điểm gì hơn POST về mặt performance? Nêu nguyên nhân và chỉ rõ điều này.
+- Giải thích khi nào nên dùng PATCH và PUT?
+- Index trong Database có bao nhiêu loại? Khi nào thì nên dùng B-Tree index, khi nào nên dùng Hash Index.
+- Hikari Pool / Connection Pool trong Spring Boot là gì?
+- Set trong Java kiểm tra 1 object / 1 key đã tồn tại như thế nào?
+- Phân biệt bộ nhớ Heap và bộ nhớ Stack.
+- So sánh ArrayList và LinkedList? Khi nào nên sử dụng cái nào?
+- Kể ra 1 số cách chống case exclusive khi 2 người cùng gọi API 1 thời điểm.
+- Browser thực chất làm gì khi người dùng tương tác? (Có thể hiểu là gửi request, header như nào, HTTP Protocol,...)
+- @Autowired Inject 1 Bean như thế nào. Bean là cái gì?
+- Partition trong Database là gì?

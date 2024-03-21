@@ -1,5 +1,6 @@
 package com.thangh28.rest.webservice.restfulwebservice.user;
 
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -33,11 +34,16 @@ public class UserResource {
     }
 
     @PostMapping("/users")
-    public ResponseEntity<User> createUser(@RequestBody User user) {
+    public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
         User savedUsers = serrvice.save(user);
 
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
                 .buildAndExpand(savedUsers.getId()).toUri(); // thay thế vào {id}
         return ResponseEntity.created(location).build(); // location ở đây sẽ trả về URI trong header
+    }
+
+    @DeleteMapping("/users/{id}")
+    public void deleteUser(@PathVariable int id) {
+        serrvice.deleteById(id);
     }
 }
