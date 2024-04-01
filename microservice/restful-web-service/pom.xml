@@ -36,6 +36,11 @@
 			<artifactId>spring-boot-starter-hateoas</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
 <!--		Nguyên nhân log thêm ra message và trace khi gặp lỗi-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -44,11 +49,11 @@
 			<optional>true</optional>
 		</dependency>
 
-		<dependency>
+		<!--dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -67,6 +72,19 @@
 <!--			<groupId>com.fasterxml.jackson.dataformat</groupId>-->
 <!--			<artifactId>jackson-dataformat-xml</artifactId>-->
 <!--		</dependency>-->
+
+		<!-- Use this for Spring Boot 3.1 and higher -->
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+		</dependency>
+
+		<!-- Use this if you are using Spring Boot 3.0 or lower
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+            </dependency>
+        -->
 
 	</dependencies>
 
