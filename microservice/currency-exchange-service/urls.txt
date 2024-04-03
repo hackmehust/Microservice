@@ -1,0 +1,14 @@
+Current Exchange Service
+http://localhost:8000/currency-exchange/from/USD/to/INR
+
+Current Conversion Service
+http:localhost:8100/currentcy-conversion/from/USD/to/INR/quanlity/10
+
+Hibernate: select ce1_0.id,ce1_0.conversion_multiple,ce1_0.enviroment,ce1_0.currency_from,ce1_0.currency_to
+from currency_exchange ce1_0
+where ce1_0.currency_from=? and ce1_0.currency_to=?
+
+Hibernate: select ce1_0.id,ce1_0.conversion_multiple,ce1_0.enviroment,ce1_0.currency_from,ce1_0.currency_to
+from currency_exchange ce1_0
+where ce1_0.currency_from=? and ce1_0.currency_to=?
+
