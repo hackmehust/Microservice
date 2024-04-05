@@ -16,7 +16,7 @@ public class CurrencyConversionController {
     @Autowired
     private CurrencyExchangeProxy proxy;
 
-    @GetMapping("/currentcy-conversion/from/{from}/to/{to}/quanlity/{quantity}")
+    @GetMapping("/currency-conversion/from/{from}/to/{to}/quanlity/{quantity}")
     public CurrencyConversion calculateCurrencyConversion(
             @PathVariable String from,
             @PathVariable String to,
@@ -43,7 +43,7 @@ public class CurrencyConversionController {
                 currencyConversion.getEnviroment() + " rest template");
     }
 
-    @GetMapping("/currentcy-conversion-feign/from/{from}/to/{to}/quanlity/{quantity}")
+    @GetMapping("/currency-conversion-feign/from/{from}/to/{to}/quanlity/{quantity}")
     public CurrencyConversion calculateCurrencyConversionFeign(
             @PathVariable String from,
             @PathVariable String to,

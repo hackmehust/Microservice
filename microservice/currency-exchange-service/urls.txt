@@ -2,8 +2,21 @@ Current Exchange Service
 http://localhost:8000/currency-exchange/from/USD/to/INR
 
 Current Conversion Service
-http:localhost:8100/currentcy-conversion/from/USD/to/INR/quanlity/10
-http://localhost:8100/currentcy-conversion-feign/from/USD/to/INR/quanlity/10000
+http:localhost:8100/currency-conversion/from/USD/to/INR/quanlity/10
+http://localhost:8100/currency-conversion-feign/from/USD/to/INR/quanlity/10000
 
 Eureka
 http://localhost:8761/
+
+API GATEWAY (Instances currently registered with Eureka)
+    spring.cloud.gateway.discovery.locator.enabled=true
+    Sử dụng / tên được đăng ký với Eureka để truy cập tới route của Service đó
+http://localhost:8765/CURRENCY-EXCHANGE/currency-exchange/from/USD/to/INR
+http://localhost:8765/CURRENCY-CONVERSION/currentcy-conversion/from/USD/to/INR/quanlity/10
+
+    Muốn biến đổi các instances được đăng ký sử dụng bằng chữ thường.
+spring.cloud.gateway.discovery.locator.lower-case-service-id=true
+http://localhost:8765/currency-exchange/currency-exchange/from/USD/to/INR
+
+
+
