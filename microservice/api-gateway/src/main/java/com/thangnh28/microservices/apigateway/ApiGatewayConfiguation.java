@@ -21,7 +21,13 @@ public class ApiGatewayConfiguation {
                                 .addRequestHeader("MyHeader", "MyURI")
                                 .addRequestParameter("Param", "MyValue"))
                         .uri("http://httpbin.org:80"))
+
+ /* Đây là điều kiện định tuyến, chỉ định rằng bất kỳ yêu cầu nào có path bắt đầu bằng "/currency-exchange"
+ sẽ được ánh xạ.*/
                 .route(p -> p.path("/currency-exchange/**")
+/* Đây là URI đích mà các yêu cầu sẽ được định tuyến đến nếu thỏa mãn điều kiện định tuyến.
+Trong trường hợp này, nó sử dụng LoadBalancer (lb://) để định tuyến đến dịch vụ có tên là "currency-exchange"
+trong Service Discovery.*/
                         .uri("lb://currency-exchange"))
                 .route(p -> p.path("/currency-conversion/**")
                         .uri("lb://currency-conversion"))
