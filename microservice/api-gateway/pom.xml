@@ -9,41 +9,23 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.thangnh28.microservices</groupId>
-	<artifactId>currency-exchange-service</artifactId>
+	<artifactId>api-gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>currency-exchange-service</name>
+	<name>api-gateway</name>
 	<description>Demo project for Spring Boot</description>
-    <properties>
-        <java.version>17</java.version>
-        <spring-cloud.version>2023.0.1</spring-cloud.version>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
-    </properties>
+	<properties>
+		<java.version>17</java.version>
+		<spring-cloud.version>2023.0.1</spring-cloud.version>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-		</dependency>
-
-		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
+			<artifactId>spring-cloud-starter-gateway</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -62,23 +44,13 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>io.github.resilience4j</groupId>
-			<artifactId>resilience4j-spring-boot2</artifactId>
-		</dependency>
-
-		<dependency>
 			<groupId>io.micrometer</groupId>
 			<artifactId>micrometer-observation</artifactId>
 		</dependency>
 
-<!-- OPTION 1 : Open Telemetry as Bridge (RECOMMENDED)
- 	 Open Telemetry
- 	 Simplified Observability (metrics, logs, and traces -->
+		<!-- OPTION 1 : Open Telemetry as Bridge (RECOMMENDED)
+              Open Telemetry
+              Simplified Observability (metrics, logs, and traces -->
 
 		<dependency>
 			<groupId>io.micrometer</groupId>
